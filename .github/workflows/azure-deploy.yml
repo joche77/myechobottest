@@ -1,0 +1,19 @@
+name: Deploy Echo Bot to Azure
+
+on:
+  push:
+    branches:
+      - main  # Triggers deployment on pushes to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Make sure this matches the Node.js v
