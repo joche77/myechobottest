@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '20.x'
 
+      - name: Change to bot directory
+        run: cd myechobottest/myechobot/samples/javascript_nodejs/02.echo-bot
+
       - name: npm install, build, and test
         run: |
           npm install
